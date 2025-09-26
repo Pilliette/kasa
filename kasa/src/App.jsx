@@ -4,7 +4,8 @@ import About from "./pages/About"
 import House from "./pages/House"
 import Error from "./components/Error"
 import Header from "./components/Header"
-// import "./App.css"
+import Footer from "./components/Footer"
+// import "./App.sass"
 
 function App() {
     return (
@@ -18,9 +19,7 @@ function App() {
                 <Route path="*" element={<Error />} />
             </Routes>
             
-            <footer>
-                <span>Kasa</span>
-            </footer>
+            <Footer />
         </div>
     )
 }

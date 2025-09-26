@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom"
+import Banner from "../../components/Banner"
+import Gallery from "../../components/Gallery"
 
 function Home() {
     return(
         <div>
-            <h1>🙋‍♀️ BIENVENUE 🙋</h1>
-
-            <div>
-                <Link to="/house">Une super loc'casion</Link>
-            </div>
+            <Banner />
+            <Gallery />
         </div>
     )
 }
