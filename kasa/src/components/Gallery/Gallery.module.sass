@@ -1,10 +1,15 @@
 .gallery
     background: #F6F6F6
     max-width: 1240px
-    height: auto
+    height: calc((2 * 340px) + 50px)
+    overflow-y: auto
     display: grid
     grid-template-columns: 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr
     gap: 50px 60px
     padding: 56px 50px 43px 50px
     border-radius: 25px
+    scrollbar-gutter: stable
+    scrollbar-color: transparent
+    &::-webkit-scrollbar
+        width: 0
+        background: transparent
