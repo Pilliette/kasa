@@ -1,9 +1,12 @@
 import styles from "./Card.module.sass"
 
-function Card() {
+function Card({ title, image }) {
     return(
-        <div className={ styles.card }>
-            <h2 className={ styles.titleCard }>Titre de la<br/>location</h2>
+        <div
+            className={ styles.card }
+            style={{ backgroundImage: `url(${ image })`}}
+        >
+            <h2 className={ styles.titleCard }>{ title }</h2>
         </div>
     )
 }
