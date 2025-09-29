@@ -1,0 +1,43 @@
+@use '../../index.sass' as v
+
+.values
+    display: flex
+    flex-direction: column
+    gap: 30px
+
+.titleContainer
+    background: v.$primary-color
+    max-width: 1023px
+    height: 52px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-radius: 5px
+
+.title
+    font-weight: 700
+    margin-top: 10px
+    margin-bottom: 8px
+    margin-left: 15px
+
+.chevronUp
+    composes: fa-solid fa-chevron-up from global
+
+.chevronDown
+    composes: fa-solid fa-chevron-down from global
+    display: none
+
+.title,
+.chevronUp,
+.chevronDown
+    color: v.$secondary-color
+    font-size: 24px
+
+.chevronUp,
+.chevronDown
+    margin-top: 21.29px
+    margin-right: 24px
+    margin-bottom: 17px
+
+.valueSummary
+    display: none
