@@ -1,34 +1,10 @@
-@use '../../index.sass' as v
-
 .gallery
     background: #F6F6F6
     max-width: 1240px
-    height: 829px
+    height: auto
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    gap: 50px 60px
     padding: 56px 50px 43px 50px
     border-radius: 25px
-
-.card
-    background: v.$primary-color
-    width: 340px
-    height: 340px
-    display: flex
-    justify-content: flex-start
-    align-items: flex-end
-    position: relative
-    border-radius: 10px
-    &::after
-        content: ""
-        position: absolute
-        background: linear-gradient(to bottom, #fff 0%, #0A0A0A00 0%, #04040469 41%, rgba(0, 0, 0, 0.3) 100%)
-        inset: 0
-        border-radius: 10px
-        z-index: 0
-
-.titleCard
-    color: v.$secondary-color
-    font-size: 18px
-    font-weight: 700
-    margin: 0
-    padding-bottom: 20px
-    padding-left: 20px
-    z-index: 2
