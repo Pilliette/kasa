@@ -1,11 +1,17 @@
+import Card from "../Card"
+import logements from "../../data/logements.json"
 import styles from "./Gallery.module.sass"
 
 function Gallery() {
     return(
         <div className={ styles.gallery }>
-            <div className={ styles.card }>
-                <h2 className={ styles.titleCard }>Titre de la<br/>location</h2>
-            </div>
+            { logements.map((house) => (
+                <Card
+                    key={ house.id }
+                    title={ house.title }
+                    image={ house.pictures[0] }
+                />
+            ))}
         </div>
     )
 }
