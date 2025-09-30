@@ -1,7 +1,12 @@
+import Banner from "../../components/Banner"
+import Values from "../../components/Values"
+import aboutImage from "../../assets/mountainBanner.png"
+
 function About() {
     return(
         <div>
-            <h1>🔍 QUI SOMMES-NOUS ? 🧬</h1>
+            <Banner image={ aboutImage } alt="Rivière qui serpente au milieu des montagnes" light />
+            <Values />
         </div>
     )
 }
