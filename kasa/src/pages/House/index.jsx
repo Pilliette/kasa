@@ -1,7 +1,9 @@
+import Carousel from "../../components/Carousel"
+
 function House() {
     return(
         <div>
-            <h1>🏰 DÉCOUVREZ NOTRE MAISON 🕌</h1>
+            <Carousel />
         </div>
     )
 }
