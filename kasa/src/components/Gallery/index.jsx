@@ -7,9 +7,8 @@ function Gallery() {
     return(
         <div className={ styles.gallery }>
             {logements.map((house) => (
-                <Link className={ styles.cardLink } key={ house.id } to="/house">
+                <Link className={ styles.cardLink } key={ house.id } to={`/house/${ house.id }`}>
                     <Card
-                        key={ house.id }
                         title={ house.title }
                         image={ house.cover }
                     />
