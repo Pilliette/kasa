@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import logements from "../../data/logements.json"
 import Carousel from "../../components/Carousel"
+import Description from "../../components/Description"
 
 function House() {
     const { id } = useParams()
@@ -14,6 +15,7 @@ function House() {
                 images={ house.pictures }
                 altPrefix={ house.title }
             />
+            <Description />
         </div>
     )
 }

@@ -1,0 +1,130 @@
+@use '../../index.sass' as v
+
+.descriptionHeader
+    height: 77px
+    display: flex
+    justify-content: space-between
+
+.title
+    color: v.$primary-color
+    font-size: 36px
+    font-weight: 500
+    height: 51px
+    margin: 0
+
+.location
+    color: v.$tertiary-color
+    font-size: 18px
+    font-weight: 500
+    height: 26px
+    margin: 0
+
+.profile
+    height: 64px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 10px
+
+.name
+    color: v.$primary-color
+    font-size: 18px
+    font-weight: 500
+    width: 93px
+    text-align: end
+    overflow-wrap: break-word
+
+.avatar
+    background: rgba(196, 196, 196, 1)
+    width: 64px
+    height: 64px
+    border-radius: 32px
+
+.badges
+    display: flex
+    justify-content: space-between
+    margin-bottom: 24px
+
+.tagsContainer
+    width: 365px
+    height: 25px
+    display: flex
+    justify-content: space-between
+    gap: 10px
+    margin-top: 18px
+
+.tag
+    color: v.$secondary-color
+    background: v.$primary-color
+    font-size: 14px
+    font-weight: 700
+    width: 115px
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 10px
+    margin: 0
+
+.rating
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.star
+    composes: fa-solid fa-star from global
+    font-size: 24.75px
+    width: 36px
+    height: 36px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.pinkStar
+    color: v.$primary-color
+
+.greyStar
+    color: rgba(227, 227, 227, 1)
+
+.subtitleContainer
+    background: v.$primary-color
+    width: 582px
+    height: 52px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-radius: 5px
+
+.subtitle
+    color: v.$secondary-color
+    font-size: 18px
+    font-weight: 700
+    margin-left: 10px
+
+.chevronUpButton
+    background: transparent
+    width: 32px
+    height: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 20px
+    padding: 0
+    border: none
+    cursor: pointer
+
+.chevronUp
+    composes: fa-solid fa-chevron-up from global
+
+.chevronDown
+    composes: fa-solid fa-chevron-down from global
+
+.chevronUp,
+.chevronDown
+    color: v.$secondary-color
+    font-size: 24px
+
+.itemsContainer
+    display: flex
+    justify-content: space-between
+    gap: 76px
