@@ -16,23 +16,32 @@ function Carousel({ images=[], altPrefix="" }) {
                 alt={`${altPrefix} - photo ${ i + 1 }/${ images.length }`}
             />
             { images.length > 1 && (
-                <>
+                <div>
                     <button
-                        className={ styles.chevronButton }
+                        className={ `${ styles.chevronButton } ${ styles.chevronButtonLeft }` }
                         type="button"
                         onClick={ prev }
                     >
                         <i className={ styles.chevronLeft }></i>
                     </button>
                     <button
-                        className={ styles.chevronButton }
+                        className={ `${ styles.chevronButton } ${ styles.chevronButtonRight }` }
                         type="button"
                         onClick={ next }
                     >
                         <i className={ styles.chevronRight }></i>
                     </button>
-                </>
+                </div>
             )}
+            { images.length > 1 && (
+                <p
+                    className={ styles.countdown }
+                    aria-live="polite"
+                >
+                    { i + 1}/{ images.length }
+                </p>
+            )}
+            
         </div>
     )
 }

@@ -15,24 +15,45 @@
 
 .chevronButton
     background: transparent
-    width: 96px
+    width: 46.68px
     height: 119.64px
     display: flex
     justify-content: center
     align-items: center
     position: absolute
+    padding: 0
+    top: calc((415px - 119.64px) / 2)
     border: none
     cursor: pointer
     z-index: 1
 
+.chevronButtonLeft
+    left: 23.36px
+
 .chevronLeft
     composes: fa-solid fa-chevron-left from global
+
+.chevronButtonRight
+    right: 23.36px
 
 .chevronRight
     composes: fa-solid fa-chevron-right from global
 
 .chevronLeft,
 .chevronRight
-    // color: v.$primary-color
-    color: red
+    color: v.$secondary-color
     font-size: 46.68px
+
+.countdown
+    color: v.$secondary-color
+    font-size: 18px
+    font-weight: 500
+    height: 32.4px
+    display: flex
+    align-items: flex-end
+    position: absolute
+    margin: 0
+    z-index: 1
+    bottom: 24.92px
+    transform: translateX(-50%)
+    left: calc( 100% / 2 )
