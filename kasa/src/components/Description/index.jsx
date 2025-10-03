@@ -68,7 +68,7 @@ function Description() {
                         Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au coeur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'Est (7 minutes à pieds).
                     </Item>
                     <Item subtitle="Équipements">
-                        <ul>
+                        <ul className={ styles.liste }>
                             <li>Climatisation</li>
                             <li>Wi-Fi</li>
                             <li>Cuisine</li>
