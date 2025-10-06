@@ -2,6 +2,7 @@ import { useState } from "react"
 import styles from "./Carousel.module.sass"
 
 function Carousel({ images=[], altPrefix="" }) {
+    
     const [i, setI] = useState(0)
     if (images.length === 0) return null
 

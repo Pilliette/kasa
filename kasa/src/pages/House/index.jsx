@@ -7,15 +7,22 @@ function House() {
     const { id } = useParams()
     const house = logements.find(h => h.id === id)
 
-    if (!house) return <p>Logement introuvable</p>
-
     return(
         <div>
             <Carousel
                 images={ house.pictures }
                 altPrefix={ house.title }
             />
-            <Description />
+            <Description
+                title={ house.title }
+                location={ house.location }
+                name={ house.host.name }
+                avatar={ house.host.picture }
+                tags={ house.tags }
+                rating={parseInt(house.rating, 10)}
+                description={ house.description }
+                equipments={ house.equipments }
+            />
         </div>
     )
 }

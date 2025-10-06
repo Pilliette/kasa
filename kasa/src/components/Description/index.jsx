@@ -35,47 +35,93 @@ function Item({ subtitle, children }) {
 
 }
 
-function Description() {
+function Description({ title="", location="", name="", avatar, tags=[], rating=0, description="", equipments=[] }) {
+
+    const maxStars = 5
+    const safeRating = Math.min(maxStars, Math.max(0, Number(rating) || 0))
+
     return(
         <div>
             <div className={ styles.descriptionHeader }>
                 <div>
-                    <h2 className={ styles.title }>Cozy loft on the Canal Saint-Martin</h2>
-                    <p className={ styles.location }>Paris, Île-de-France</p>
+                    <h2
+                        className={ styles.title }
+                        title={ title }
+                    >
+                        { title }
+                    </h2>
+                    <p
+                        className={ styles.location }
+                        location={ location }
+                    >
+                        { location }
+                    </p>
                 </div>
+
                 <div className={ styles.profile }>
-                    <p className={ styles.name }>Alexandre Dumas</p>
-                    <img className={ styles.avatar } />
+                    <p
+                        className={ styles.name }
+                        name={ name }
+                    >
+                        { name }
+                    </p>
+                    <img
+                        className={ styles.avatar }
+                        src={ avatar }
+                        alt="Photo de profil"
+                    />
                 </div>
             </div>
+
             <div>
                 <div className={ styles.badges }>
-                    <div className={ styles.tagsContainer }>
-                        <p className={ styles.tag }>Cozy</p>
-                        <p className={ styles.tag }>Canal</p>
-                        <p className={ styles.tag }>Paris 10</p>
-                    </div>
-                    <div className={ styles.rating }>
-                        <i className={ `${styles.star } ${ styles.pinkStar }` } />
-                        <i className={ `${styles.star } ${ styles.pinkStar }` } />
-                        <i className={ `${styles.star } ${ styles.pinkStar }` } />
-                        <i className={ `${styles.star } ${ styles.greyStar }` } />
-                        <i className={ `${styles.star } ${ styles.greyStar }` } />
+                    <ul
+                        className={ styles.tagsContainer }
+                        tags={ tags }
+                    >
+                        { tags.map((tg, idx) => (
+                            <li
+                                key={ idx }
+                                className={ styles.tag }
+                            >
+                                { tg }
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div
+                        className={ styles.rating }
+                        aria-label={ `Note : ${ safeRating } sur ${ maxStars }` }
+                        role="img"
+                    >
+                        { Array.from({ length: maxStars }, (_, i) => (
+                            <i
+                                key={ i }
+                                aria-hidden="true"
+                                className={ `${ styles.star } ${ i < safeRating ? styles.pinkStar : styles.greyStar }` }
+                            />
+                        ))}
                     </div>
                 </div>
+
                 <div className={ styles.itemsContainer }>
-                    <Item subtitle="Description">
-                        Vous serez à 50m du canal Saint-Martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au coeur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à 1 station de la gare de l'Est (7 minutes à pieds).
+                    <Item
+                        subtitle="Description"
+                        description={ description }
+                    >
+                        { description }
                     </Item>
-                    <Item subtitle="Équipements">
+
+                    <Item
+                        subtitle="Équipements"
+                        equipments={ equipments }
+                    >
                         <ul className={ styles.liste }>
-                            <li>Climatisation</li>
-                            <li>Wi-Fi</li>
-                            <li>Cuisine</li>
-                            <li>Espace de travail</li>
-                            <li>Fer à repasser</li>
-                            <li>Sèche-cheveux</li>
-                            <li>Cintres</li>
+                            { equipments.map((eq, idx) => (
+                                <li key={ idx }>
+                                    { eq }
+                                </li>
+                            ))}
                         </ul>
                     </Item>
                 </div>

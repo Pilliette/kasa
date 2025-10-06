@@ -5,7 +5,6 @@ import House from "./pages/House"
 import Error from "./components/Error"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-// import "./App.sass"
 
 function App() {
     return (
