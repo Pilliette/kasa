@@ -1,7 +1,28 @@
+import { useParams } from "react-router-dom"
+import logements from "../../data/logements.json"
+import Carousel from "../../components/Carousel"
+import Description from "../../components/Description"
+
 function House() {
+    const { id } = useParams()
+    const house = logements.find(h => h.id === id)
+
     return(
         <div>
-            <h1>🏰 DÉCOUVREZ NOTRE MAISON 🕌</h1>
+            <Carousel
+                images={ house.pictures }
+                altPrefix={ house.title }
+            />
+            <Description
+                title={ house.title }
+                location={ house.location }
+                name={ house.host.name }
+                avatar={ house.host.picture }
+                tags={ house.tags }
+                rating={parseInt(house.rating, 10)}
+                description={ house.description }
+                equipments={ house.equipments }
+            />
         </div>
     )
 }

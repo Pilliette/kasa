@@ -1,0 +1,60 @@
+@use '../../index.sass' as v
+
+.carousel
+    max-width: 1240px
+    height: 415px
+    position: relative
+    margin-bottom: 30px
+
+.image
+    width: 100%
+    height: 100%
+    position: absolute
+    border-radius: 25px
+    object-fit: cover
+    z-index: 0
+
+.chevronButton
+    background: transparent
+    width: 46.68px
+    height: 119.64px
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    padding: 0
+    top: calc((415px - 119.64px) / 2)
+    border: none
+    cursor: pointer
+    z-index: 1
+
+.chevronButtonLeft
+    left: 23.36px
+
+.chevronLeft
+    composes: fa-solid fa-chevron-left from global
+
+.chevronButtonRight
+    right: 23.36px
+
+.chevronRight
+    composes: fa-solid fa-chevron-right from global
+
+.chevronLeft,
+.chevronRight
+    color: v.$secondary-color
+    font-size: 46.68px
+
+.countdown
+    color: v.$secondary-color
+    font-size: 18px
+    font-weight: 500
+    height: 32.4px
+    display: flex
+    align-items: flex-end
+    position: absolute
+    margin: 0
+    z-index: 1
+    bottom: 24.92px
+    transform: translateX(-50%)
+    left: calc( 100% / 2 )

@@ -5,7 +5,6 @@ import House from "./pages/House"
 import Error from "./components/Error"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-// import "./App.sass"
 
 function App() {
     return (
@@ -15,7 +14,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/house" element={<House />} />
+                <Route path="/house/:id" element={<House />} />
                 <Route path="*" element={<Error />} />
             </Routes>
             
