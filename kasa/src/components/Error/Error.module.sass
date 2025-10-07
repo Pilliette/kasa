@@ -27,3 +27,31 @@
     color: v.$tertiary-color
     font-size: 18px
     font-weight: 500
+
+.mobileBreak
+    display: none
+
+// BREAKPOINT
+
+@media (min-width: 375px) and (max-width: 767px)
+
+    .error
+        margin-top: 113px
+        margin-bottom: 113px
+        gap: 113px
+
+    .errorCode
+        font-size: 96px
+        height: 99px
+
+    .errorMessage
+        font-size: 18px
+        width: 260px
+        height: 52px
+        text-align: center
+
+    .errorReturnLink
+        font-size: 14px
+
+    .mobileBreak
+        display: inline
