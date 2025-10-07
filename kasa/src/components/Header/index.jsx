@@ -1,4 +1,4 @@
-import Logo from "../../../public/pinkLogo_kasa.png"
+import Logo from "/pinkLogo_kasa.png"
 import { Link } from "react-router-dom"
 import styles from "./Header.module.sass"
 
