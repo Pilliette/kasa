@@ -16,9 +16,9 @@ function House() {
             <Description
                 title={ house.title }
                 location={ house.location }
+                tags={ house.tags }
                 name={ house.host.name }
                 avatar={ house.host.picture }
-                tags={ house.tags }
                 rating={parseInt(house.rating, 10)}
                 description={ house.description }
                 equipments={ house.equipments }

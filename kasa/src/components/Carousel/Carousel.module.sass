@@ -58,3 +58,32 @@
     bottom: 24.92px
     transform: translateX(-50%)
     left: calc( 100% / 2 )
+
+// BREAKPOINT
+
+@media (min-width: 375px) and (max-width: 767px)
+
+    .carousel
+        height: 255px
+        margin-bottom: 15px
+
+    .image
+        border-radius: 10px
+
+    .chevronButton
+        width: 24px
+        height: 24px
+        top: calc((255px - 24px) / 2)
+
+    .chevronButtonLeft
+        left: 0
+
+    .chevronButtonRight
+        right: 0
+
+    .chevronLeft,
+    .chevronRight
+        font-size: 19.8px
+
+    .countdown
+        display: none
