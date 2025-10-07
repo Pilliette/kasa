@@ -43,7 +43,7 @@
 .chevronLeft,
 .chevronRight
     color: v.$secondary-color
-    font-size: 46.68px
+    font-size: 79.2px
 
 .countdown
     color: v.$secondary-color
@@ -59,9 +59,9 @@
     transform: translateX(-50%)
     left: calc( 100% / 2 )
 
-// BREAKPOINT
+// BREAKPOINTS
 
-@media (min-width: 375px) and (max-width: 767px)
+@media (min-width: 375px) and (max-width: 768px)
 
     .carousel
         height: 255px
@@ -87,3 +87,27 @@
 
     .countdown
         display: none
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .carousel
+        height: 335px
+        margin-bottom: 23px
+
+    .image
+        border-radius: 18px
+
+    .chevronButton
+        width: 60px
+        height: 60px
+        top: calc((335px - 60px) / 2)
+
+    .chevronButtonLeft
+        left: 0
+
+    .chevronButtonRight
+        right: 0
+
+    .chevronLeft,
+    .chevronRight
+        font-size: 49.5px
