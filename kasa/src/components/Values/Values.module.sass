@@ -60,9 +60,12 @@
 .itemOpen .valueSummary
     display: block
 
-// BREAKPOINT
+// BREAKPOINTS
 
 @media (min-width: 375px) and (max-width: 767px)
+
+    .values
+        gap: 20px
 
     .titleContainer
         width: calc(100vw - 40px)
@@ -81,3 +84,27 @@
 
     .valueSummary
         font-size: 12px
+
+@media (min-width: 768px) and (max-width: 1023px)
+
+    .values
+        gap: 25px
+
+    .titleContainer
+        width: calc(100vw - 228px)
+        height: 41px
+
+    .title
+        font-size: 19px
+
+    .chevronUpButton
+        margin-right: 16px
+        padding: 0
+
+    .chevronUp,
+    .chevronDown
+        font-size: 20px
+
+    .valueSummary
+        font-size: 15px
+        width: calc(100vw - 228px - 40px)
