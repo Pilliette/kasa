@@ -7,7 +7,7 @@ function Item({ subtitle, children }) {
     const itemId = useId()
 
     return(
-        <div className={ `${open ? styles.itemOpen : ""}` }>
+        <div>
             <div className={ styles.subtitleContainer }>
                 <h3 className={ styles.subtitle }>{ subtitle }</h3>
                 <button
@@ -35,46 +35,30 @@ function Item({ subtitle, children }) {
 
 }
 
-function Description({ title="", location="", name="", avatar, tags=[], rating=0, description="", equipments=[] }) {
+function Description({ title="", location="", tags=[], name="", avatar, rating=0, description="", equipments=[] }) {
 
     const maxStars = 5
     const safeRating = Math.min(maxStars, Math.max(0, Number(rating) || 0))
 
     return(
-        <div>
+        <div className={ styles.description }>
             <div className={ styles.descriptionHeader }>
-                <div>
-                    <h2
-                        className={ styles.title }
-                        title={ title }
-                    >
-                        { title }
-                    </h2>
-                    <p
-                        className={ styles.location }
-                        location={ location }
-                    >
-                        { location }
-                    </p>
-                </div>
+                <div className={ styles.leftDescriptionHeader }>
+                    <div className={ styles.topDescriptionHeader }>
+                        <h2
+                            className={ styles.title }
+                            title={ title }
+                        >
+                            { title }
+                        </h2>
+                        <p
+                            className={ styles.location }
+                            location={ location }
+                        >
+                            { location }
+                        </p>
+                    </div>
 
-                <div className={ styles.profile }>
-                    <p
-                        className={ styles.name }
-                        name={ name }
-                    >
-                        { name }
-                    </p>
-                    <img
-                        className={ styles.avatar }
-                        src={ avatar }
-                        alt="Photo de profil"
-                    />
-                </div>
-            </div>
-
-            <div>
-                <div className={ styles.badges }>
                     <ul
                         className={ styles.tagsContainer }
                         tags={ tags }
@@ -88,6 +72,22 @@ function Description({ title="", location="", name="", avatar, tags=[], rating=0
                             </li>
                         ))}
                     </ul>
+                </div>
+
+                <div className={ styles.rightDescriptionHeader }>
+                    <div className={ styles.profile }>
+                        <p
+                            className={ styles.name }
+                            name={ name }
+                        >
+                            { name }
+                        </p>
+                        <img
+                            className={ styles.avatar }
+                            src={ avatar }
+                            alt="Photo de profil"
+                        />
+                    </div>
 
                     <div
                         className={ styles.rating }
@@ -103,28 +103,28 @@ function Description({ title="", location="", name="", avatar, tags=[], rating=0
                         ))}
                     </div>
                 </div>
+            </div>
 
-                <div className={ styles.itemsContainer }>
-                    <Item
-                        subtitle="Description"
-                        description={ description }
-                    >
-                        { description }
-                    </Item>
+            <div className={ styles.descriptionFooter }>
+                <Item
+                    subtitle="Description"
+                    description={ description }
+                >
+                    { description }
+                </Item>
 
-                    <Item
-                        subtitle="Équipements"
-                        equipments={ equipments }
-                    >
-                        <ul className={ styles.liste }>
-                            { equipments.map((eq, idx) => (
-                                <li key={ idx }>
-                                    { eq }
-                                </li>
-                            ))}
-                        </ul>
-                    </Item>
-                </div>
+                <Item
+                    subtitle="Équipements"
+                    equipments={ equipments }
+                >
+                    <ul className={ styles.liste }>
+                        { equipments.map((eq, idx) => (
+                            <li key={ idx }>
+                                { eq }
+                            </li>
+                        ))}
+                    </ul>
+                </Item>
             </div>
         </div>
     )

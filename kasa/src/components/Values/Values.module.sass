@@ -13,7 +13,7 @@
 
 .titleContainer
     background: v.$primary-color
-    width: 1023px
+    width: calc(100vw - 200px)
     height: 52px
     display: flex
     justify-content: space-between
@@ -50,11 +50,61 @@
     font-size: 24px
 
 .valueSummary
+    font-size: 18px
+    font-weight: 400
     max-width: calc(1023px - (2*20px))
     display: none
     margin-right: 20px
     margin-left: 20px
-    text-align: justify
 
 .itemOpen .valueSummary
     display: block
+
+// BREAKPOINTS
+
+@media (min-width: 375px) and (max-width: 768px)
+
+    .values
+        gap: 20px
+
+    .titleContainer
+        width: calc(100vw - 40px)
+        height: 30px
+
+    .title
+        font-size: 13px
+
+    .chevronUpButton
+        margin-right: 12px
+        padding: 0
+
+    .chevronUp,
+    .chevronDown
+        font-size: 16px
+
+    .valueSummary
+        font-size: 12px
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .values
+        gap: 25px
+
+    .titleContainer
+        width: calc(100vw - 228px)
+        height: 41px
+
+    .title
+        font-size: 19px
+
+    .chevronUpButton
+        margin-right: 16px
+        padding: 0
+
+    .chevronUp,
+    .chevronDown
+        font-size: 20px
+
+    .valueSummary
+        font-size: 15px
+        width: calc(100vw - 228px - 40px)

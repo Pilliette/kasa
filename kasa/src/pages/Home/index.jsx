@@ -8,7 +8,7 @@ function Home() {
     return(
         <div>
             <Banner image={ homeImage } alt="La mer s'écrasant sur la côte">
-                Chez vous,<br className={ styles.mobileBreak } />partout et ailleurs
+                Chez vous, <br className={ styles.mobileBreak } />partout et ailleurs
             </Banner>
             <Gallery />
         </div>

@@ -1,4 +1,4 @@
-import Logo from "../../../public/whiteLogo_kasa.png"
+import Logo from "/whiteLogo_kasa.png"
 import styles from "./Footer.module.sass"
 
 function Footer() {

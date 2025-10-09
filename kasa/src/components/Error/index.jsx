@@ -5,7 +5,7 @@ function Error() {
     return(
         <div className={ styles.error }>
             <p className={ styles.errorCode }>404</p>
-            <p className={ styles.errorMessage }>Oups! La page que vous demandez n'existe pas.</p>
+            <p className={ styles.errorMessage }>Oups! La page que<br className={ styles.mobileBreak } />vous demandez n'existe pas.</p>
             <Link className={ styles.errorReturnLink } to="/">Retourner sur la page d'accueil</Link>
         </div>
     )

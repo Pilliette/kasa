@@ -27,3 +27,54 @@
     color: v.$tertiary-color
     font-size: 18px
     font-weight: 500
+
+.mobileBreak
+    display: none
+
+// BREAKPOINTS
+
+@media (min-width: 375px) and (max-width: 768px)
+
+    .error
+        margin-top: 113px
+        margin-bottom: 113px
+        gap: 113px
+
+    .errorCode
+        font-size: 96px
+        height: 99px
+
+    .errorMessage
+        font-size: 18px
+        width: 260px
+        height: 52px
+        text-align: center
+
+    .errorReturnLink
+        font-size: 14px
+
+    .mobileBreak
+        display: inline
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .error
+        margin-top: 126px
+        margin-bottom: 126px
+        gap: 126px
+
+    .errorCode
+        font-size: 192px
+        height: 181px
+
+    .errorMessage
+        font-size: 27px
+        width: 566px
+        height: 52px
+        text-align: center
+
+    .errorReturnLink
+        font-size: 16px
+
+    .mobileBreak
+        display: inline
