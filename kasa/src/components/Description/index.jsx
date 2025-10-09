@@ -23,13 +23,13 @@ function Item({ subtitle, children }) {
                     />
                 </button>
             </div>
-            <p
+            <div
                 id={ itemId }
                 className={ styles.descriptionSummary }
                 hidden={ !open }
             >
                 { children }
-            </p>
+            </div>
         </div>
     )
 
