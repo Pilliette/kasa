@@ -37,8 +37,8 @@ function Item({ subtitle, children }) {
 
 function Description({ title="", location="", tags=[], name="", avatar, rating=0, description="", equipments=[] }) {
 
+    const houseRating = Number(rating)
     const maxStars = 5
-    const safeRating = Math.min(maxStars, Math.max(0, Number(rating) || 0))
 
     return(
         <div className={ styles.description }>
@@ -63,12 +63,12 @@ function Description({ title="", location="", tags=[], name="", avatar, rating=0
                         className={ styles.tagsContainer }
                         tags={ tags }
                     >
-                        { tags.map((tg, idx) => (
+                        { tags.map((tag, i) => (
                             <li
-                                key={ idx }
+                                key={ i }
                                 className={ styles.tag }
                             >
-                                { tg }
+                                { tag }
                             </li>
                         ))}
                     </ul>
@@ -91,14 +91,13 @@ function Description({ title="", location="", tags=[], name="", avatar, rating=0
 
                     <div
                         className={ styles.rating }
-                        aria-label={ `Note : ${ safeRating } sur ${ maxStars }` }
-                        role="img"
+                        aria-label={ `Note : ${ houseRating } sur ${ maxStars }` }
                     >
                         { Array.from({ length: maxStars }, (_, i) => (
                             <i
                                 key={ i }
                                 aria-hidden="true"
-                                className={ `${ styles.star } ${ i < safeRating ? styles.pinkStar : styles.greyStar }` }
+                                className={ `${ styles.star } ${ i < houseRating ? styles.pinkStar : styles.greyStar }` }
                             />
                         ))}
                     </div>
@@ -118,9 +117,9 @@ function Description({ title="", location="", tags=[], name="", avatar, rating=0
                     equipments={ equipments }
                 >
                     <ul className={ styles.liste }>
-                        { equipments.map((eq, idx) => (
-                            <li key={ idx }>
-                                { eq }
+                        { equipments.map((equipment, i) => (
+                            <li key={ i }>
+                                { equipment }
                             </li>
                         ))}
                     </ul>
