@@ -1,4 +1,4 @@
-import Item from "../Collapse"
+import Collapse from "../Collapse"
 
 import styles from "./Description.module.sass"
 
@@ -72,14 +72,14 @@ function Description({ title="", location="", tags=[], name="", avatar, rating=0
             </div>
 
             <div className={ styles.descriptionFooter }>
-                <Item
+                <Collapse
                     title="Description"
                     description={ description }
                 >
                     { description }
-                </Item>
+                </Collapse>
 
-                <Item
+                <Collapse
                     title="Équipements"
                     equipments={ equipments }
                 >
@@ -90,7 +90,7 @@ function Description({ title="", location="", tags=[], name="", avatar, rating=0
                             </li>
                         ))}
                     </ul>
-                </Item>
+                </Collapse>
             </div>
         </div>
     )

@@ -2,20 +2,20 @@ import { useState, useId } from "react"
 
 import styles from "./Collapse.module.sass"
 
-function Item({ title, children }) {
+function Collapse({ title, children }) {
 
     const [open, setOpen] = useState(false)
-    const itemId = useId()
+    const collapseId = useId()
 
     return(
-        <div className={ styles.item }>
+        <div className={ styles.collapse }>
             <div className={ styles.titleContainer }>
                 <h2 className={ styles.title }>{ title }</h2>
                 <button
                     type="button"
                     className={ styles.chevronUpButton }
                     aria-expanded={ open }
-                    aria-controls={ itemId }
+                    aria-controls={ collapseId }
                     onClick={() => setOpen(o => !o)}
                 >
                     <i
@@ -25,7 +25,7 @@ function Item({ title, children }) {
                 </button>
             </div>
             <div
-                id={ itemId }
+                id={ collapseId }
                 className={ `${ styles.summary } ${ open ? styles.open : "" }` }
             >
                 { children }
@@ -35,4 +35,4 @@ function Item({ title, children }) {
 
 }
 
-export default Item
+export default Collapse
