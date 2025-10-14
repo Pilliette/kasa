@@ -2,13 +2,13 @@ import { useState, useId } from "react"
 
 import styles from "./Collapse.module.sass"
 
-function Item({ title, children, about=false }) {
+function Item({ title, children }) {
 
     const [open, setOpen] = useState(false)
     const itemId = useId()
 
     return(
-        <div className={ `${ styles.item } ${ about ? styles.about : "" }` }>
+        <div className={ styles.item }>
             <div className={ styles.titleContainer }>
                 <h2 className={ styles.title }>{ title }</h2>
                 <button
