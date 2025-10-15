@@ -2,7 +2,7 @@ import Collapse from "../Collapse"
 
 import styles from "./Description.module.sass"
 
-function Description({ title="", location="", tags=[], name="", avatar, rating=0, description="", equipments=[] }) {
+function Description({ title="", location="", tags=[], name="", avatar, rating=0 }) {
 
     const houseRating = Number(rating)
     const maxStars = 5
@@ -69,28 +69,6 @@ function Description({ title="", location="", tags=[], name="", avatar, rating=0
                         ))}
                     </div>
                 </div>
-            </div>
-
-            <div className={ styles.descriptionFooter }>
-                <Collapse
-                    title="Description"
-                    description={ description }
-                >
-                    { description }
-                </Collapse>
-
-                <Collapse
-                    title="Équipements"
-                    equipments={ equipments }
-                >
-                    <ul className={ styles.liste }>
-                        { equipments.map((equipment, i) => (
-                            <li key={ i }>
-                                { equipment }
-                            </li>
-                        ))}
-                    </ul>
-                </Collapse>
             </div>
         </div>
     )
